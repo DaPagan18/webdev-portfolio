@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sea Creatures Battleships</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Sea Creatures Battleships</h1>
+
+  <div id="status"></div>
+
+  <div id="boards-container">
+    <div class="board-wrapper">
+      <h2 id="left-board-label">Left Board</h2>
+      <div id="left-board" class="board"></div>
+    </div>
+    <div class="board-wrapper">
+      <h2 id="right-board-label">Right Board</h2>
+      <div id="right-board" class="board"></div>
+    </div>
+  </div>
+
+  <button id="end-turn-btn" disabled>End Turn</button>
+
+  <div id="overlay" class="hidden">
+    <div id="overlay-content">
+      <p id="overlay-text"></p>
+      <button id="overlay-continue-btn">Tap to continue</button>
+    </div>
+  </div>
+
+  <script src="js/creatures.js"></script>
+  <script src="js/board.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
