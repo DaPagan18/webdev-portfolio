@@ -1,12 +1,7 @@
-// Handles DOM rendering and tile updates
-
 const leftBoardEl = document.getElementById("left-board");
 const rightBoardEl = document.getElementById("right-board");
 const statusEl = document.getElementById("status");
-const endTurnBtn = document.getElementById("end-turn-btn");
-const overlayEl = document.getElementById("overlay");
-const overlayTextEl = document.getElementById("overlay-text");
-const overlayContinueBtn = document.getElementById("overlay-continue-btn");
+
 const leftLabelEl = document.getElementById("left-board-label");
 const rightLabelEl = document.getElementById("right-board-label");
 
@@ -35,12 +30,14 @@ function setStatus(text) {
 }
 
 function showOverlay(text) {
-  overlayTextEl.textContent = text;
-  overlayEl.classList.remove("hidden");
+  document.getElementById("turnModalText").textContent = text;
+  const modal = new bootstrap.Modal(document.getElementById("turnModal"));
+  modal.show();
 }
 
 function hideOverlay() {
-  overlayEl.classList.add("hidden");
+  const modal = bootstrap.Modal.getInstance(document.getElementById("turnModal"));
+  modal.hide();
 }
 
 function markMiss(tileEl) {
