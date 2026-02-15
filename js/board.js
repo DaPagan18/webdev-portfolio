@@ -3,11 +3,11 @@ class Board {
     this.size = size;
     this.grid = Array.from({ length: size }, () =>
       Array.from({ length: size }, () => ({
-        creature: null, // reference to creature instance
+        creature: null,
         hit: false
       }))
     );
-    this.creatureInstances = []; // { creatureDef, tiles: [{x,y}], hits: number }
+    this.creatureInstances = [];
   }
 
   inBounds(x, y) {
@@ -50,7 +50,6 @@ class Board {
       for (let attempts = 0; attempts < maxAttempts && !placed; attempts++) {
         const shape = shapes[Math.floor(Math.random() * shapes.length)];
 
-        // find bounding box to limit origin
         let minDx = Infinity, maxDx = -Infinity, minDy = Infinity, maxDy = -Infinity;
         for (const { dx, dy } of shape) {
           if (dx < minDx) minDx = dx;
@@ -88,14 +87,14 @@ class Board {
       return { hit: false, miss: true };
     }
 
-    // find creature instance and update hits
-    const instance = this.creatureInstances.find(ci => ci.def === cell.creature && ci.tiles.some(t => t.x === x && t.y === y));
-    if (!instance) {
-      return { hit: true, defeated: false, creature: cell.creature };
-    }
+    const instance = this.creatureInstances.find(ci =>
+      ci.def === cell.creature &&
+      ci.tiles.some(t => t.x === x && t.y === y)
+    );
 
     instance.hits++;
     let defeated = false;
+
     if (!instance.defeated && instance.hits >= instance.tiles.length) {
       instance.defeated = true;
       defeated = true;
