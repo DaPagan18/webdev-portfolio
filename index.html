@@ -8,8 +8,8 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3">
+<body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-md navbar-dark custom-nav mb-3">
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="#">
                 <img src="images/GridArt_20260215_171653689.png" alt="Logo" class="navbar-logo">
@@ -33,7 +33,7 @@
         </div>
     </nav>
     
-    <div class="container mb-4">
+    <div class="container mt-5 mb-4">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="card text-bg-light">
@@ -50,28 +50,66 @@
 
     <div class="container mb-4">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-6 col-lg-4">
+            <div class="col-8 col-md-4 col-lg-3">
                 <div class="btn-group-vertical w-100">
-                    <a class="btn btn-outline-secondary text-dark d-flex align-items-center gap-2"
+    
+                    <a class="btn btn-light d-flex align-items-center w-100" 
                         href="https://www.tiktok.com/@lordd4n">
-                        <img src="images/TikTok.png" class="social-icon">
-                        My TikTok
+                        <div class="col-auto">
+                            <img src="images/TikTok.png" class="social-icon">
+                        </div>
+                        <div class="col text-center">
+                            My TikTok
+                        </div>
+                        <div class="col-auto"></div>
                     </a>
-                    <a class="btn btn-outline-secondary text-dark d-flex align-items-center gap-2"
+                    <a class="btn btn-light d-flex align-items-center w-100"
                         href="https://letterboxd.com/lordd4n/">
-                        <img src="images/Letterboxd.png" class="social-icon">
-                        My Letterboxd
+
+                        <div class="col-auto">
+                            <img src="images/Letterboxd.png" class="social-icon">
+                        </div>
+
+                        <div class="col text-center">
+                            My Letterboxd
+                        </div>
+
+                        <div class="col-auto"></div>
                     </a>
-                    <a class="btn btn-outline-secondary text-dark d-flex align-items-center gap-2"
+                    <a class="btn btn-light d-flex align-items-center w-100"
                         href="https://www.serializd.com/user/LORDDAN/profile">
-                        <img src="images/Serializd Logo.png" class="social-icon">
-                        My Serializd
+
+                        <div class="col-auto">
+                            <img src="images/Serializd Logo.png" class="social-icon">
+                        </div>
+
+                        <div class="col text-center">
+                            My Serializd
+                        </div>
+
+                        <div class="col-auto"></div>
                     </a>
                 </div>
             </div>
         </div>
     </div>
 
+    <footer class="mt-auto footer-custom py-4">
+        <div class="container text-center">
 
+            <div class="row mb-3">
+                <div class="col d-flex justify-content-center gap-4">
+                    <a href="creature-game.html" class="text-decoration-none text-light">My Game</a>
+                    <a href="form-application.html" class="text-decoration-none text-light">Contact Us</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <small class="text-light">© 2026</small>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
